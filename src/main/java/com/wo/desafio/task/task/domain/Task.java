@@ -1,17 +1,17 @@
 package com.wo.desafio.task.task.domain;
 
+import com.wo.desafio.task.application.api.TaskRequest;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import lombok.AccessLevel;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.UUID;
 
-@Data
+@Getter
 @Entity
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
+@AllArgsConstructor
 public class Task {
 
     @Id
@@ -28,4 +28,10 @@ public class Task {
     private LocalDate createdAt;
     @Column(name = "updated_at")
     private LocalDate updatedAt;
+
+    public Task(TaskRequest taskRequest) {
+        this.title = taskRequest.getTitle();
+        this.description = taskRequest.getDescription();
+        this.createdAt = LocalDate.now();
+    }
 }

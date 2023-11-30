@@ -7,8 +7,7 @@ import lombok.Value;
 import java.util.UUID;
 
 
-@Value
 @Builder
-public class TaskResponse {
-    UUID id;
+public record TaskResponse(UUID id) {
 }
+

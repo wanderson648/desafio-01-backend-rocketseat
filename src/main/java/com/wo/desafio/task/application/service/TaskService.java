@@ -1,8 +1,14 @@
 package com.wo.desafio.task.application.service;
 
-import com.wo.desafio.task.application.api.TaskRequest;
-import com.wo.desafio.task.application.api.TaskResponse;
+import com.wo.desafio.task.application.api.*;
+
+import java.util.List;
+import java.util.UUID;
 
 public interface TaskService {
     TaskResponse createTask(TaskRequest taskRequest);
+    List<TaskListResponse> getAllTasks();
+    PutTaskRequest putTask(UUID idTask, PutTaskRequest putTaskRequest);
+    void deleteTask(UUID idTask);
+    void markTaskAsCompleted(UUID idTask, MarkTaskAsCompleted markTaskAsCompleted);
 }

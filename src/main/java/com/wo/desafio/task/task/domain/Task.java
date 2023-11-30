@@ -1,5 +1,7 @@
 package com.wo.desafio.task.task.domain;
 
+import com.wo.desafio.task.application.api.MarkTaskAsCompleted;
+import com.wo.desafio.task.application.api.PutTaskRequest;
 import com.wo.desafio.task.application.api.TaskRequest;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -23,15 +25,27 @@ public class Task {
     @NotBlank
     private String description;
     @Column(name = "completed_at")
-    private final LocalDate completedAt = null;
+    private Boolean completedAt;
     @Column(name = "created_at")
     private LocalDate createdAt;
     @Column(name = "updated_at")
     private LocalDate updatedAt;
 
     public Task(TaskRequest taskRequest) {
-        this.title = taskRequest.getTitle();
-        this.description = taskRequest.getDescription();
+        this.title = taskRequest.title();
+        this.description = taskRequest.description();
         this.createdAt = LocalDate.now();
+    }
+
+    public void editTask(PutTaskRequest putTaskRequest) {
+        this.title = putTaskRequest.title();
+        this.description = putTaskRequest.description();
+        this.updatedAt = LocalDate.now();
+    }
+
+    public void markAsCompleted(MarkTaskAsCompleted markTaskAsCompleted) {
+        this.completedAt = markTaskAsCompleted.completedAt();
+        this.updatedAt = LocalDate.now();
+
     }
 }

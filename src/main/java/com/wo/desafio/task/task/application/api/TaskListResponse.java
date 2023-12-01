@@ -1,10 +1,13 @@
-package com.wo.desafio.task.application.api;
+package com.wo.desafio.task.task.application.api;
 
 import com.wo.desafio.task.task.domain.Task;
 import jakarta.persistence.Column;
+import jakarta.persistence.Version;
 import jakarta.validation.constraints.NotBlank;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.ToString;
+import lombok.Value;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -30,6 +33,7 @@ public class TaskListResponse {
         this.description = task.getDescription();
         this.completedAt = task.getCompletedAt();
         this.createdAt = LocalDate.now();
+
     }
 
     public static List<TaskListResponse> convert(List<Task> tasks) {

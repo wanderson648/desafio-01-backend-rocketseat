@@ -1,6 +1,6 @@
-package com.wo.desafio.task.application.api;
+package com.wo.desafio.task.task.application.api;
 
-import com.wo.desafio.task.application.service.TaskService;
+import com.wo.desafio.task.task.application.service.TaskService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

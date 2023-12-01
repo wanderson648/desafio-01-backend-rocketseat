@@ -1,13 +1,12 @@
-package com.wo.desafio.task.application.infra;
+package com.wo.desafio.task.task.application.infra;
 
-import com.wo.desafio.task.application.repository.TaskRepository;
+import com.wo.desafio.task.task.application.repository.TaskRepository;
 import com.wo.desafio.task.task.domain.Task;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 @Repository

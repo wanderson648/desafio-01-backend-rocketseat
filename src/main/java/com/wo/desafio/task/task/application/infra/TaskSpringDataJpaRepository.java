@@ -1,4 +1,4 @@
-package com.wo.desafio.task.application.infra;
+package com.wo.desafio.task.task.application.infra;
 
 import com.wo.desafio.task.task.domain.Task;
 import org.springframework.data.jpa.repository.JpaRepository;

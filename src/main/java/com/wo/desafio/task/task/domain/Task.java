@@ -1,8 +1,8 @@
 package com.wo.desafio.task.task.domain;
 
-import com.wo.desafio.task.application.api.MarkTaskAsCompleted;
-import com.wo.desafio.task.application.api.PutTaskRequest;
-import com.wo.desafio.task.application.api.TaskRequest;
+import com.wo.desafio.task.task.application.api.MarkTaskAsCompleted;
+import com.wo.desafio.task.task.application.api.PutTaskRequest;
+import com.wo.desafio.task.task.application.api.TaskRequest;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
@@ -12,6 +12,7 @@ import java.util.UUID;
 
 @Getter
 @Entity
+@Builder
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @AllArgsConstructor
 public class Task {

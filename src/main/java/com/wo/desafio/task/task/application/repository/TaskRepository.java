@@ -1,4 +1,4 @@
-package com.wo.desafio.task.application.repository;
+package com.wo.desafio.task.task.application.repository;
 
 import com.wo.desafio.task.task.domain.Task;
 

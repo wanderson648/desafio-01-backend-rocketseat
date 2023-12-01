@@ -1,4 +1,4 @@
-package com.wo.desafio.task.application.api;
+package com.wo.desafio.task.task.application.api;
 
 import jakarta.validation.constraints.NotBlank;
 

@@ -1,6 +1,6 @@
-package com.wo.desafio.task.application.service;
+package com.wo.desafio.task.task.application.service;
 
-import com.wo.desafio.task.application.api.*;
+import com.wo.desafio.task.task.application.api.*;
 
 import java.util.List;
 import java.util.UUID;

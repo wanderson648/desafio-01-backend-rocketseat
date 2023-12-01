@@ -1,7 +1,7 @@
-package com.wo.desafio.task.application.service;
+package com.wo.desafio.task.task.application.service;
 
-import com.wo.desafio.task.application.api.*;
-import com.wo.desafio.task.application.repository.TaskRepository;
+import com.wo.desafio.task.task.application.api.*;
+import com.wo.desafio.task.task.application.repository.TaskRepository;
 import com.wo.desafio.task.task.domain.Task;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
